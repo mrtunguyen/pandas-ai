@@ -229,7 +229,7 @@ class SmartDatalake:
         if "dfs" not in default_values:
             prompt.set_var("dfs", self._dfs)
         if "conversation" not in default_values:
-            prompt.set_var("conversation", self._memory.get_conversation())
+            prompt.set_var("conversation", self._memory.get_conversation(4))
         for key, value in default_values.items():
             prompt.set_var(key, value)
 
